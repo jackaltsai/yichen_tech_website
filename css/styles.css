@@ -7765,6 +7765,16 @@ textarea.form-control-lg {
   color: #6c757d !important;
 }
 
+.text-white-size {
+  color: #fff;
+  font-size: larger;
+}
+
+.text-content-size {
+  color: #fff;
+  font-size: 30px;
+}
+
 .text-black-50 {
   --bs-text-opacity: 1;
   color: rgba(0, 0, 0, 0.5) !important;
