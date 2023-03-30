@@ -191,8 +191,13 @@
                 <h2 class="text-center text-white font-alt mb-4">Contact or Email Us Now!</h2>
                 
                 <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-                    <a href="mailto:admin@yichen-technology.com"><i class="bi-envelope icon-white"></i></a>
+                    <a href="mailto:admin@yichen-technology.com"><i class="bi-envelope icon-white" onclick="gtag_report_conversion"></i></a>
                     <h4 class="title text-white text-email">admin@yichen-technology.com</h4>
+                </div>
+
+                <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+                    <i class="bi-phone icon-white"></i></a>
+                    <h4 class="title text-white text-email">(02)2269-5792</h4>
                 </div>
             </div>
         </section>
@@ -202,18 +207,34 @@
         <div class="container px-5">
             <div class="text-white-50 small">
                 <div class="mb-2">&copy; YiChen-Technology Website 2023. All Rights Reserved.</div>
-                <a href="https://jackaltsai.github.io/yichen_tech_website/privacy.html">Privacy</a>
+                <a href="https://www.yichen-technology.com/privacy.html">Privacy</a>
             </div>
         </div>
         </footer>
 
         <script>
+            function gtag_report_conversion() {
+                let url = 'https://www.yichen-technology.com/'
+                var callback = function () {
+                    if (typeof(url) != 'undefined') {
+                    window.location = url;
+                    }
+                };
+                
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-872014419/2B-7CKe97YoYENPE558D',
+                    'event_callback': callback
+                });
+                return false;
+            }
+        </script>
+        <script>
             (function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.")}var ch=function(){ch.c(arguments)};ch.q=[];ch.c=function(args){ch.q.push(args)};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x)}}if(document.readyState==="complete"){l()}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l)}})();
-          
+            
             ChannelIO('boot', {
               "pluginKey": "8e695b50-d24a-4d0e-aba1-254e726d95f0"
             });
-          </script>
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     </body>
